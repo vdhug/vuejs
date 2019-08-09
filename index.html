@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+  <script src="./vue.js"></script>
+  <title>VueJS</title>
+</head>
+<body>
+  <p>Vue</p>
+
+  <div id="app">
+    <p>{{nome}}</p> 
+    <p>{{idade}}</p>
+    <p>{{faculdade.nome}}</p>
+    <p>{{faculdade.curso}}</p>
+  </div>
+
+
+  <script>
+
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        nome: 'Vitor Hugo',
+        idade: 22,
+        faculdade: {
+          nome: 'UFAC', 
+          curso: 'Analise de Sistemas',
+        },
+      }
+    });
+  </script>
+  
+</body>
+</html>
