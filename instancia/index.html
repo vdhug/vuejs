@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./vue.js"></script>
+  <title>Instancia Exercicio</title>
+</head>
+<body>
+
+  <!-- Fazer o HTML funcionar com VUE -->
+  <div id="app1">
+    {{ferramenta}}
+  </div>
+
+  <div id="app2">
+    {{instrumento}}
+  </div>
+
+  <script>
+    // Crie uma tag com o id app  e inicie  uma instancia de Vue
+    const vm1 = new Vue({
+      el: '#app1',
+      data: {
+        ferramenta: 'Martelo',
+      },
+    });
+
+    const vm2 = new Vue({
+      el: '#app2',
+      data: {
+        instrumento: 'Violino',
+      },
+    });
+
+
+  </script>
+</body>
+</html>
