@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercicio</title>
+  <script src="./vue.js"></script>
+</head>
+<body>
+
+  <div id="app">
+    <h3>Company name: {{info.companyName}}</h3>
+    <h3>Latest price: {{info.latestPrice}}</h3>
+    <h3>Latest time: {{info.latestTime}}</h3>
+    <button @click='getApi()'>Request API</button>
+  </div>
+  
+  <script>
+    
+    // Utilizando a API
+    // https://cloud.iexapis.com/stable/stock/aapl/quote?token=
+
+    // Crie um método que faça o fetch da resposta acima
+    // O método deve ser ativado ao clique no botão Ver Preço
+
+    // Coloque a resposta json do fetch em uma data e
+    // mostre o valor de lalestPrice, latestTime e o
+    // companyName na interface.
+
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        info: {},
+      },
+      methods: {
+        getApi() {
+          fetch('https://cloud.iexapis.com/stable/stock/aapl/quote?token=TOKEN_HERE')
+            .then(response => response.json())
+            .then(json => this.info = json);
+        }
+      }
+    });
+
+  
+  </script>
+
+
+</body>
+</html>
