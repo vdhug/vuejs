@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../vue.js"></script>
+  <style>
+    body {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 1rem;
+    }
+  </style>
+  <title>Exercicio v-on</title>
+</head>
+
+<body>
+
+
+  <div id="app">
+
+    <ul>
+      <li><a @click.prevent="getDataCompany"
+          href="https://cloud.iexapis.com/stable/stock/aapl/quote?token=TOKER_HERE">Apple</a>
+      </li>
+      <li><a @click.prevent="getDataCompany"
+          href="https://cloud.iexapis.com/stable/stock/googl/quote?token=TOKER_HERE">Google</a>
+      </li>
+      <li><a @click.prevent="getDataCompany"
+          href="https://cloud.iexapis.com/stable/stock/amzn/quote?token=TOKER_HERE">Amazon</a>
+      </li>
+      <li><a @click.prevent="getDataCompany"
+          href="https://cloud.iexapis.com/stable/stock/ebay/quote?token=TOKER_HERE">Ebay</a>
+      </li>
+      <li><a @click.prevent="getDataCompany"
+          href="https://cloud.iexapis.com/stable/stock/pypl/quote?token=TOKER_HERE">Paypal</a>
+      </li>
+    </ul>
+
+    <div>
+      <h3>{{company.companyName}}</h3>
+      <p>{{company.latestPrice}}</p>
+      <p>{{company.marketCap}}</p>
+    </div>
+
+  </div>
+  <!--
+        Utilizando API
+        https://api.iextrading.com/1.0/stock/aapl/quote
+      
+        Adicione um evento de clique a cada <a> do html
+        acima e previna o comportamento padrão.
+      
+        Faça o fetch dos dados do href ao click e mostre na
+        interface o companyName, latestPrice, marketCap
+      -->
+
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        company: {},
+      },
+      methods: {
+        getDataCompany(event) {
+          const url = event.target.href;
+          fetch(url)
+            .then(response => response.json())
+            .then(json => this.company = json);
+        },
+      }
+    });
+  </script>
+
+</body>
+
+</html>
