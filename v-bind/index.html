@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./vue.js"></script>
+  <style>
+
+    body {
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    .red {
+      color: red;
+      font-weight: bold;
+    }
+
+    .green {
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+  <title>Exercicio</title>
+</head>
+<body>
+  
+  <div id="app">
+    <div>
+      <p>Nome da empresa: <span :class='(appl.marketCap > googl.marketCap) ? "green" : "red"'>{{appl.companyName}}</span></p>
+      <p>Valor de mercado: {{appl.marketCap}}</p>
+    </div>
+
+    <div>
+        <p>Nome da empresa: <span :class='(appl.marketCap < googl.marketCap) ? "green" : "red"'>{{googl.companyName}}</span></p>
+        <p>Valor de mercado: {{googl.marketCap}}</p>
+    </div>  
+  </div>
+
+  <!--
+    Utilizando as API's
+    https://api.iextrading.com/1.0/stock/aapl/quote
+    https://api.iextrading.com/1.0/stock/googl/quote
+
+    - Compare o marketCap (valor de
+    mercado) entre ambas.
+
+    - Mostre o nome das empresas e o valor
+    na interace (companyName e marketCap).
+
+    - Mude a cor para verde o nome da empresa com
+    maior marketCap e vermelho a com menor.
+  -->
+
+
+
+  <script>
+
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        appl: {},
+        googl: {}
+      },
+      methods: {
+        getAppl() {
+          fetch('https://cloud.iexapis.com/stable/stock/aapl/quote?token=TOKEN_HERE')
+            .then(response => response.json())
+            .then(json => this.appl = json);
+        },
+        getGoogl() {
+          fetch('https://cloud.iexapis.com/stable/stock/googl/quote?token=TOKEN_HERE')
+            .then(response => response.json())
+            .then(json => this.googl = json);
+        },
+      }
+    });
+
+    vm.getAppl();
+    vm.getGoogl();
+
+  </script>
+</body>
+</html>
