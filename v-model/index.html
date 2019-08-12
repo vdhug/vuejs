@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../vue.js"></script>
+  <title>Exercicios V-model</title>
+
+  <style>
+    body {
+      margin: 20px 20px;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+
+    form {
+      margin-top: 40px;
+    }
+
+    form label {
+      display: block;
+      width: 50%;
+      margin: 0px 0px 5px;
+    }
+
+    form input[type='text'], form select, form textarea {
+      display: block;
+      width: 50%;
+      padding: 5px 5px;
+      border-radius: 3px;
+      font-size: 1.3rem;
+      border: 2px solid #842e84;
+      margin-bottom: 10px;
+    }
+
+    .option-label {
+      display: inline-block;
+      width: 8%;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="app">
+    <div>
+      <button :style="button">Comprar Aqui</button>
+    </div>
+    <form action="">
+        <label for="width">Width</label>
+        <input v-model="button.width" type="text" name="width">
+        <label for="height">Height</label>
+        <input v-model="button.height" type="text" name="height">
+        <label for="fontFamily">Font-family</label>
+        <input v-model="button.fontFamily" type="text" name="fontFamily">
+        <label for="fontSize">Font-size</label>
+        <input v-model="button.fontSize" type="text" name="fontSize">
+        <label for="textAlign">Text-align</label>
+        <input v-model="button.textAlign" type="radio" value="left" id="left"/>
+        <label class="option-label" for="left">Left</label>
+        <input v-model="button.textAlign" type="radio" value="right" id="right"/>
+        <label class="option-label" for="right">Right</label>
+
+        <label for="background">Background</label>
+        <select v-model="button.background" id="background">
+          <option disabled value="">Selecione uma cor de background</option>
+          <option value="#DBC2CF">Thistle</option>
+          <option value="#9FA2B2">Cadet Grey</option>
+          <option value="#3C7A89">Teal Blue</option>
+          <option value="#2E4756">Dark Slate Grey</option>
+          <option value="#16262E">Dark Gun Metal</option>
+        </select>
+
+        <label for="color">Color</label>
+        <select v-model="button.color" id="color">
+          <option disabled value="">Selecione a cor do texto</option>
+          <option value="#DBC2CF">Thistle</option>
+          <option value="#9FA2B2">Cadet Grey</option>
+          <option value="#3C7A89">Teal Blue</option>
+          <option value="#2E4756">Dark Slate Grey</option>
+          <option value="#16262E">Dark Gun Metal</option>
+        </select>
+
+        <label for="radius">Radius</label>
+        <input v-model="button.radius" type="text" name="radius">
+
+    </form>
+    
+
+    <div>
+
+      <h1>Values</h1>
+      Width: {{button.width}} <br>
+      Height: {{button.height}} <br>
+      fontSize: {{button.fontSize}} <br>
+      fontFamily: {{button.fontFamily}} <br>
+      textAlign: {{button.textAlign}} <br>
+      Background: {{button.background}} <br>
+      Color: {{button.color}} <br>
+      Radius: {{button.radius}} <br>
+    </div>
+
+  </div>
+
+
+  <div id="app2">
+    <form action="">
+      <label for="nome">Nome</label>
+      <input v-model="nome" type="text" placeholder="Nome">
+      <label for="email">Email</label>
+      <input v-model="email" type="text" placeholder="Email">
+      <label for="telefone">Telefone</label>
+      <input v-model="telefone" type="text" placeholder="Telefone">
+      <label for="mensagem">Mensagem</label>
+      <textarea v-model="mensagem" name="mensage" id="mensage" cols="30" rows="10"></textarea>
+      <input @click.prevent="enviarInfo" type="submit" value="Enviar">
+    </form>
+
+    <div>
+      <p>{{resultado.nome}}</p>
+      <p>{{resultado.email}}</p>
+      <p>{{resultado.telefone}}</p>
+      <p>{{resultado.mensagem}}</p>
+    </div>
+  </div>
+  
+  <!-- 
+  1 - Crie um criador de botões.
+
+  O usuário poderá definir:
+  width,
+  height,
+  font-size,
+  font-family,
+  text-align,
+  background,
+  color,
+  border-radius,
+
+  As escolhas serão feitas em campos de
+  formulário. Cada escolha deverá ser 
+  refletida em um elemento (o botão).
+
+
+  2 - Crie um formulário com, nome, email, telefone e mensagem.
+  Ao clicar em enviar, as informações preenchidas no formulário
+  devem aparecer abaixo do mesmo. (previna o comportamento padrão do botão enviar)
+ -->
+
+ <script>
+   const vm = new Vue({
+    el: "#app",
+    data: {
+      button: {
+        width: "",
+        height: "",
+        fontSize: "",
+        fontFamily: "",
+        textAlign: "",
+        background: "",
+        color: "",
+        radius: "",
+      },
+    }
+   });
+
+
+   const vm2 = new Vue({
+    el: "#app2",
+    data: {
+      nome: "",
+      email: "",
+      telefone: "",
+      mensagem: "",
+      resultado: {},
+    },
+    methods: {
+        enviarInfo() {
+          this.resultado = {
+            nome: this.nome,
+            email: this.email,
+            telefone: this.telefone,
+            mensagem: this.mensagem,
+          }
+        }
+      }
+   });
+ </script>
+
+</body>
+
+</html>
