@@ -119,10 +119,12 @@
     </form>
 
     <div>
-      <p>{{resultado.nome}}</p>
-      <p>{{resultado.email}}</p>
-      <p>{{resultado.telefone}}</p>
-      <p>{{resultado.mensagem}}</p>
+      <ul>
+        <li v-for="(value, key) in resultado">
+          <h3>{{key}}</h3>
+          <p>{{value}}</p>
+        </li>
+      </ul>
     </div>
   </div>
   
