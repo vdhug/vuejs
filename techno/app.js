@@ -2,7 +2,7 @@ const app = new Vue({
   el: "#app",
   data: {
     produtos: [],
-    produto: false,
+    produto: {},
   },
   filters: {
     numeroPreco(valor) {
