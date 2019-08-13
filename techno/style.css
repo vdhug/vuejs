@@ -25,6 +25,35 @@ body {
   padding: 0 80px;
 }
 
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 20px 0;
+}
+
+.logo {
+  width: 80px;
+}
+
+.carrinho_menu::after {
+  content: "";
+  display: inline-block;
+  background: url("./assets/carrinho.svg") no-repeat center center;
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+}
+
+.carrinho_menu {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+
 /* LISTA PRODUTOS */
 
 .produtos {
@@ -133,7 +162,8 @@ body {
   font-family: "Noto Serif";
 }
 
-.modal_btn:active {
+.modal_btn:active,
+.modal_btn.esgotado {
   background: #808080;
 }
 
