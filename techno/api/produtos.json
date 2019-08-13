@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": "notebook",
     "nome": "Notebook",
     "preco": 2999,
@@ -19,14 +20,13 @@
   {
     "id": "smartwatch",
     "nome": "Smartwatch",
-    "preco": 1099,
+    "preco": 1199,
     "img": "./api/produtos/smartwatch/smartwatch.jpg"
   },
   {
     "id": "speaker",
     "nome": "Speaker",
-    "preco": 499,
+    "preco": 599,
     "img": "./api/produtos/speaker/speaker.jpg"
   }
-
 ]
