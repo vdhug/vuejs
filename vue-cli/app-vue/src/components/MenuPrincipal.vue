@@ -17,14 +17,13 @@
 <script>
 import SobreEmpresa from "./SobreEmpresa.vue";
 import ServicosEmpresa from "./ServicosEmpresa.vue";
-import ContatoEmpresa from "./ContatoEmpresa.vue";
 
 export default {
   name: "MenuPrincipal",
   components: {
     SobreEmpresa,
     ServicosEmpresa,
-    ContatoEmpresa
+    ContatoEmpresa: () => import("./ContatoEmpresa.vue")
   },
   data() {
     return {
