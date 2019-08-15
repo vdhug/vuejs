@@ -26,7 +26,8 @@
     <!-- <aula-descricao></aula-descricao>
     <aula-download></aula-download>-->
 
-    <menu-principal></menu-principal>
+    <!-- <menu-principal></menu-principal> -->
+    
   </div>
 </template>
 
