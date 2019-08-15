@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>{{mensagem}}</h1>
+    <!-- <h1>{{mensagem}}</h1>
     <header-principal></header-principal>
     <modal-principal>
       <template v-slot:header>
@@ -14,22 +14,36 @@
         <h3>{{user}}</h3>
         <p>Esse é um teste</p>
       </template>
-    </modal-principal>
+    </modal-principal>-->
+    <!-- Aula sobre Dynamic -->
+    <!-- <button @click="componenteAtivo = 'AulaDescricao'">Descricao</button>
+    <button @click="componenteAtivo = 'AulaDownload'">Download</button>-->
+
+    <!-- Keep alive para o elemento não ser destruído e ser criado apenas uma vez -->
+    <!-- <keep-alive>
+      <component :is="componenteAtivo"></component>
+    </keep-alive>-->
+    <!-- <aula-descricao></aula-descricao>
+    <aula-download></aula-download>-->
+
+    <menu-principal></menu-principal>
   </div>
 </template>
 
 <script>
-import HeaderPrincipal from "./components/HeaderPrincipal.vue";
-import ModalPrincipal from "./components/ModalPrincipal.vue";
+import AulaDescricao from "./components/AulaDescricao.vue";
+import AulaDownload from "./components/AulaDownload.vue";
+import MenuPrincipal from "./components/MenuPrincipal.vue";
 
 export default {
   components: {
-    HeaderPrincipal,
-    ModalPrincipal
+    MenuPrincipal,
+    AulaDescricao,
+    AulaDownload
   },
   data() {
     return {
-      mensagem: "Ola Mundo"
+      componenteAtivo: "AulaDownload"
     };
   }
 };
