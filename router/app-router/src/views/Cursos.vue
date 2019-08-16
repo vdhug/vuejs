@@ -1,15 +1,24 @@
 <template>
   <div>
-    <h1>Cursos</h1>
+    <h1>Curso ativo: {{curso}}</h1>
     <ul>
-      <li>Javascript</li>
-      <li>CSS com SASS</li>
-      <li>Vue JS</li>
+      <router-link to="/cursos/javascript">Javascript</router-link>
+      <router-link to="/cursos/css">CSS</router-link>
+      <router-link to="/cursos/html">HTML</router-link>
     </ul>
   </div>
 </template>
 
 
 <script>
-export default {};
+export default {
+  props: ["curso"],
+  created() {
+    console.log("Componente criado");
+  },
+  beforeRouteUpdate(to, from, next) {
+    console.log(to, from);
+    next();
+  }
+};
 </script>
