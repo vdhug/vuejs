@@ -14,6 +14,9 @@ export default {
   components: {
     Aluno,
     Curso
+  },
+  created() {
+    this.$store.dispatch("puxarAcao");
   }
 };
 </script>
