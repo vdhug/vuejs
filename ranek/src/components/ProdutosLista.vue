@@ -11,22 +11,36 @@
 
 <script>
 import { api } from "@/services.js";
+import { serialize } from "@/helpers.js";
+
 export default {
   name: "ProdutosBuscar",
   data() {
     return {
-      produtos: null
+      produtos: null,
+      produtosPorPagina: 9
     };
+  },
+  computed: {
+    url() {
+      const queryString = serialize(this.$route.query);
+      return `/produto?_limit=${this.produtosPorPagina}${queryString}`;
+    }
   },
   methods: {
     getProdutos() {
-      api.get("/produto").then(r => {
+      api.get(this.url).then(r => {
         this.produtos = r.data;
       });
     }
   },
   created() {
     this.getProdutos();
+  },
+  watch: {
+    url() {
+      this.getProdutos();
+    }
   }
 };
 </script>
