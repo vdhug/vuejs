@@ -21,6 +21,7 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -40,7 +41,7 @@ ul {
 }
 
 body {
-  font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
   color: #345;
   background: url("./assets/pattern.svg") repeat top;
 }
@@ -67,7 +68,7 @@ img {
   box-shadow: 0 4px 8px rgba(30, 60, 90, 0.2);
   transition: all 0.3s;
   border: none;
-  font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
   cursor: pointer;
 }
 
@@ -84,5 +85,26 @@ img {
 
 main {
   flex: 1;
+}
+
+input,
+textarea {
+  border-radius: 4px;
+  border: 1px solid #fff;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(30, 60, 90, 0.1);
+  transition: all 0.3s;
+  font-size: 1rem;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  margin-bottom: 15px;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
+  border-color: #87f;
 }
 </style>
