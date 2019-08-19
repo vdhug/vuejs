@@ -30,7 +30,7 @@ export default {
   data() {
     return {
       produtos: null,
-      produtosPorPagina: 9,
+      produtosPorPagina: 3,
       produtosTotal: 0
     };
   },
