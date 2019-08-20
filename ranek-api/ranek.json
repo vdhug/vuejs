@@ -1,6 +1,5 @@
 {
-  "usuario": [
-    {
+  "usuario": [{
       "id": "andre@origamid.com",
       "email": "andre@origamid.com",
       "nome": "André Rafael",
@@ -35,11 +34,10 @@
       "estado": "AC"
     }
   ],
-  "produto": [
-    {
+  "produto": [{
       "id": "notebook",
       "nome": "Notebook",
-      "usuario_id": "andre@origamid.com",
+      "usuario_id": "vitor@gmail.com",
       "preco": "4999",
       "vendido": "false",
       "descricao": "Esse é um novo notebook.",
@@ -57,7 +55,7 @@
     {
       "id": "tablet",
       "nome": "Tablet",
-      "usuario_id": "andre@origamid.com",
+      "usuario_id": "vitor@gmail.com",
       "preco": "1399",
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
