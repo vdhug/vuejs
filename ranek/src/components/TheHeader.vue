@@ -21,6 +21,8 @@ export default {
   }
 };
 </script>
+
+
 <style scoped>
 nav {
   display: flex;
