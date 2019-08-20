@@ -9,7 +9,19 @@
     "numero": "25",
     "estado": "RJ",
     "cidade": "Rio de Janeiro"
-  }],
+  },
+  {
+    "id": "vitor@gmail.com",
+    "email": "vitor@gmail.com",
+    "nome": "Vitor Hugo",
+    "senha": "123",
+    "rua": "Rua Ali Perto",
+    "cep": "12345678",
+    "numero": "25",
+    "estado": "AC",
+    "cidade": "S. Guiomard"
+  }
+],
   "produto": [{
       "id": "notebook",
       "nome": "Notebook",
