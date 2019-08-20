@@ -1,5 +1,6 @@
 {
-  "usuario": [{
+  "usuario": [
+    {
       "id": "andre@origamid.com",
       "email": "andre@origamid.com",
       "nome": "André Rafael",
@@ -34,7 +35,8 @@
       "estado": "AC"
     }
   ],
-  "produto": [{
+  "produto": [
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "vitor@gmail.com",
@@ -843,6 +845,22 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
+    },
+    {
+      "nome": "Smartv",
+      "preco": "2300",
+      "descricao": "Essa é uma smartv",
+      "fotos": null,
+      "usuario_id": "vitor@gmail.com",
+      "id": "DG8918n"
+    },
+    {
+      "nome": "Smartv",
+      "preco": "2300",
+      "descricao": "Essa é outr smartv",
+      "fotos": null,
+      "usuario_id": "vitor@gmail.com",
+      "id": "-T76rz5"
     }
   ]
 }
