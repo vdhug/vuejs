@@ -1,4 +1,94 @@
 {
+  "transacao": [
+    {
+      "comprador_id": "vitor@gmail.com",
+      "vendedor_id": "andre@origamid.com",
+      "produto": {
+        "id": "smartphone",
+        "nome": "Smartphone",
+        "usuario_id": "andre@origamid.com",
+        "preco": "1999",
+        "vendido": "false",
+        "descricao": "Esse é um novo smartphone.",
+        "fotos": null
+      },
+      "endereco": {
+        "cep": "12345678",
+        "rua": "Rua Ali Perto",
+        "numero": "25",
+        "bairro": "J. Botânico",
+        "cidade": "S. Guiomard",
+        "estado": "AC"
+      },
+      "id": 1
+    },
+    {
+      "comprador_id": "manoel@gmail.com",
+      "vendedor_id": "vitor@gmail.com",
+      "produto": {
+        "id": "notebook",
+        "nome": "Notebook",
+        "usuario_id": "vitor@gmail.com",
+        "preco": "4999",
+        "vendido": "false",
+        "descricao": "Esse é um novo notebook.",
+        "fotos": null
+      },
+      "endereco": {
+        "cep": "22020001",
+        "rua": "Avenida Nossa Senhora de Copacabana",
+        "numero": "99",
+        "bairro": "Copacabana",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ"
+      },
+      "id": 2
+    },
+    {
+      "comprador_id": "nill@gmail.com",
+      "vendedor_id": "vitor@gmail.com",
+      "produto": {
+        "id": "tablet",
+        "nome": "Tablet",
+        "usuario_id": "vitor@gmail.com",
+        "preco": "1399",
+        "vendido": "false",
+        "descricao": "Esse é um novo tablet.",
+        "fotos": null
+      },
+      "endereco": {
+        "cep": "22020001",
+        "rua": "Avenida Nossa Senhora de Copacabana",
+        "numero": "85",
+        "bairro": "Copacabana",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ"
+      },
+      "id": 3
+    },
+    {
+      "comprador_id": "t@gmail.com",
+      "vendedor_id": "vitor@gmail.com",
+      "produto": {
+        "id": "notebook",
+        "nome": "Notebook",
+        "usuario_id": "vitor@gmail.com",
+        "preco": "4999",
+        "vendido": "false",
+        "descricao": "Esse é um novo notebook.",
+        "fotos": null
+      },
+      "endereco": {
+        "cep": "69925000",
+        "rua": "Jardim",
+        "numero": "12",
+        "bairro": "Botanico",
+        "cidade": "Senador Guiomard",
+        "estado": "AC"
+      },
+      "id": 4
+    }
+  ],
   "usuario": [
     {
       "id": "andre@origamid.com",
@@ -32,6 +122,42 @@
       "rua": "Pio",
       "numero": "12",
       "bairro": "Centro",
+      "cidade": "Senador Guiomard",
+      "estado": "AC"
+    },
+    {
+      "id": "manoel@gmail.com",
+      "nome": "Manoel",
+      "email": "manoel@gmail.com",
+      "senha": "123",
+      "cep": "22020001",
+      "rua": "Avenida Nossa Senhora de Copacabana",
+      "numero": "99",
+      "bairro": "Copacabana",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ"
+    },
+    {
+      "id": "nill@gmail.com",
+      "nome": "Nill",
+      "email": "nill@gmail.com",
+      "senha": "123",
+      "cep": "22020001",
+      "rua": "Avenida Nossa Senhora de Copacabana",
+      "numero": "85",
+      "bairro": "Copacabana",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ"
+    },
+    {
+      "id": "t@gmail.com",
+      "nome": "Teste",
+      "email": "t@gmail.com",
+      "senha": "123",
+      "cep": "69925000",
+      "rua": "Jardim",
+      "numero": "12",
+      "bairro": "Botanico",
       "cidade": "Senador Guiomard",
       "estado": "AC"
     }
