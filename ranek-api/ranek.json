@@ -1,28 +1,42 @@
 {
-  "usuario": [{
-    "id": "andre@origamid.com",
-    "email": "andre@origamid.com",
-    "nome": "André Rafael",
-    "senha": "123",
-    "rua": "Rua Ali Perto",
-    "cep": "12345678",
-    "numero": "25",
-    "estado": "RJ",
-    "cidade": "Rio de Janeiro"
-  },
-  {
-    "id": "vitor@gmail.com",
-    "email": "vitor@gmail.com",
-    "nome": "Vitor Hugo",
-    "senha": "123",
-    "rua": "Rua Ali Perto",
-    "cep": "12345678",
-    "numero": "25",
-    "estado": "AC",
-    "cidade": "S. Guiomard"
-  }
-],
-  "produto": [{
+  "usuario": [
+    {
+      "id": "andre@origamid.com",
+      "email": "andre@origamid.com",
+      "nome": "André Rafael",
+      "senha": "123",
+      "rua": "Rua Ali Perto",
+      "cep": "12345678",
+      "numero": "25",
+      "estado": "RJ",
+      "cidade": "Rio de Janeiro"
+    },
+    {
+      "id": "vitor@gmail.com",
+      "email": "vitor@gmail.com",
+      "nome": "Vitor Hugo",
+      "senha": "123",
+      "rua": "Rua Ali Perto",
+      "cep": "12345678",
+      "numero": "25",
+      "estado": "AC",
+      "cidade": "S. Guiomard"
+    },
+    {
+      "id": "maria@gmail.com",
+      "nome": "Maria",
+      "email": "maria@gmail.com",
+      "senha": "123",
+      "cep": "69925000",
+      "rua": "Pio",
+      "numero": "12",
+      "bairro": "Centro",
+      "cidade": "Senador Guiomard",
+      "estado": "AC"
+    }
+  ],
+  "produto": [
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -48,7 +62,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -74,7 +89,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -100,7 +116,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -126,7 +143,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -152,7 +170,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -178,7 +197,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -204,7 +224,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -230,7 +251,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -256,7 +278,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -282,7 +305,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -308,7 +332,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -334,7 +359,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -360,7 +386,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -386,7 +413,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -412,7 +440,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -438,7 +467,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -464,7 +494,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -490,7 +521,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -516,7 +548,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -542,7 +575,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -568,7 +602,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -594,7 +629,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -620,7 +656,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -646,7 +683,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -672,7 +710,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -698,7 +737,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -724,7 +764,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -750,7 +791,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
@@ -776,7 +818,8 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
-    },{
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
       "usuario_id": "andre@origamid.com",
