@@ -13,14 +13,15 @@
     },
     {
       "id": "vitor@gmail.com",
+      "nome": "Vitor Editado",
       "email": "vitor@gmail.com",
-      "nome": "Vitor Hugo",
       "senha": "123",
-      "rua": "Rua Ali Perto",
       "cep": "12345678",
+      "rua": "Rua Ali Perto",
       "numero": "25",
-      "estado": "AC",
-      "cidade": "S. Guiomard"
+      "bairro": "J. Botânico",
+      "cidade": "S. Guiomard",
+      "estado": "AC"
     },
     {
       "id": "maria@gmail.com",
