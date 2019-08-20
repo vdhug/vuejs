@@ -9,7 +9,10 @@ export const api = {
   },
   post(endpoint, obj) {
     return axiosInstance.post(endpoint, obj);
-  }
+  },
+  delete(endpoint) {
+    return axiosInstance.delete(endpoint);
+  },
 }
 
 export function getCep(cep) {
