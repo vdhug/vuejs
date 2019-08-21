@@ -58,7 +58,7 @@ export default {
         );
         await this.criarTransacao();
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     }
   }
