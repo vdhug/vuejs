@@ -11,7 +11,7 @@ import UsuarioVendas from './views/usuario/UsuarioVendas.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [{
@@ -34,6 +34,9 @@ export default new Router({
     {
       path: '/usuario',
       component: Usuario,
+      meta: {
+        login: true,
+      },
       children: [{
           path: '',
           name: 'usuario',
@@ -64,4 +67,18 @@ export default new Router({
     })
   }
 
-})
+});
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.login)) {
+    if (!window.localStorage.token) {
+      next("/login");
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
+});
+
+export default router;
