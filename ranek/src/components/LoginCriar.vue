@@ -24,14 +24,19 @@ export default {
     UsuarioForm
   },
   methods: {
-    async criarUsuario() {
+    async criarUsuario(event) {
       this.erros = [];
+      const btn = event.currentTarget;
+      btn.value = "Criando usuário...";
+      btn.setAttribute("disabled", "");
       try {
         await this.$store.dispatch("criarUsuario", this.$store.state.usuario);
         await this.$store.dispatch("logarUsuario", this.$store.state.usuario);
         await this.$store.dispatch("getUsuario");
         this.$router.push({ name: "usuario" });
       } catch (e) {
+        btn.removeAttribute("disabled");
+        btn.value = "Criar Usuário";
         this.erros.push(e.response.data.message);
       }
     }
