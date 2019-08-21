@@ -5,40 +5,44 @@ const axiosInstance = axios.create({
 });
 
 axiosInstance.interceptors.request.use(
-  (config) => {
+  function (config) {
     const token = window.localStorage.token;
     if (token) {
       config.headers.Authorization = token;
     }
     return config;
   },
-  (error) => {
+  function (error) {
     return Promise.reject(error);
   }
-)
+);
 
 export const api = {
   get(endpoint) {
     return axiosInstance.get(endpoint);
   },
-  post(endpoint, obj) {
-    return axiosInstance.post(endpoint, obj);
+  post(endpoint, body) {
+    return axiosInstance.post(endpoint, body);
   },
-  put(endpoint, obj) {
-    return axiosInstance.put(endpoint, obj);
+  put(endpoint, body) {
+    return axiosInstance.put(endpoint, body);
   },
   delete(endpoint) {
     return axiosInstance.delete(endpoint);
   },
   login(body) {
-    return axios.post("http://rankeapilocal.local/wp-json/jwt-auth/v1/token", body);
+    return axios.post(
+      "http://rankeapilocal.local/wp-json/jwt-auth/v1/token",
+      body
+    );
   },
   validateToken() {
-    return axios.post("http://rankeapilocal.local/wp-json/jwt-auth/v1/token/validate");
-
+    return axiosInstance.post(
+      "http://rankeapilocal.local/wp-json/jwt-auth/v1/token/validate"
+    );
   }
-}
+};
 
 export function getCep(cep) {
-  return axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+  return axios.get(`https://viacep.com.br/ws/${cep}/json/`);
 }
