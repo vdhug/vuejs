@@ -48,6 +48,7 @@ export default {
   created() {
     if (this.login) {
       this.getCompras();
+      document.title = "Ranek - Usuário | Compras";
     }
   }
 };

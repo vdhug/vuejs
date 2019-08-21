@@ -49,6 +49,9 @@ export default {
           this.erros.push(erro.response.data.message);
         });
     }
+  },
+  created() {
+    document.title = "Ranek - Login";
   }
 };
 </script>
