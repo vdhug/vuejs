@@ -41,7 +41,7 @@ export default {
       this.erros = [];
       this.$store
         .dispatch("logarUsuario", this.login)
-        .then(r => {
+        .then(() => {
           this.$store.dispatch("getUsuario");
           this.$router.push({ name: "usuario" });
         })
