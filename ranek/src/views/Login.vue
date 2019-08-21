@@ -7,9 +7,13 @@
       <label for="senha">Senha</label>
       <input type="password" name="senha" id="senha" v-model="login.senha" />
       <button class="btn" @click.prevent="logar">Logar</button>
+      <ErroNotificacao :erros="erros" />
     </form>
     <p class="perdeu">
-      <a href="/" target="_blank">Perdeu a senha? Clique aqui.</a>
+      <a
+        href="http://rankeapilocal.local/wp-login.php?action=lostpassword"
+        target="_blank"
+      >Perdeu a senha? Clique aqui.</a>
     </p>
     <LoginCriar />
   </section>
@@ -25,7 +29,8 @@ export default {
       login: {
         email: "",
         senha: ""
-      }
+      },
+      erros: []
     };
   },
   components: {
@@ -33,10 +38,16 @@ export default {
   },
   methods: {
     logar() {
-      this.$store.dispatch("logarUsuario", this.login).then(r => {
-        this.$store.dispatch("getUsuario");
-        this.$router.push({ name: "usuario" });
-      });
+      this.erros = [];
+      this.$store
+        .dispatch("logarUsuario", this.login)
+        .then(r => {
+          this.$store.dispatch("getUsuario");
+          this.$router.push({ name: "usuario" });
+        })
+        .catch(erro => {
+          this.erros.push(erro.response.data.message);
+        });
     }
   }
 };
